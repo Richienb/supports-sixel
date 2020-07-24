@@ -1,6 +1,6 @@
 {
 	"name": "supports-sixel",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Detect whether a terminal can display sixels.",
 	"repository": "https://github.com/Richienb/supports-sixel.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
