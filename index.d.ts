@@ -1,15 +1,16 @@
 /**
-My awesome module.
-@param input Lorem ipsum.
-@param postfix Lorem ipsum.
+Detect whether a terminal can display [sixels](https://en.wikipedia.org/wiki/Sixel).
 @example
 ```
-const theModule = require("the-module");
+const supportsSixel = require("supports-sixel");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	const isSupported = await supportsSixel();
+
+	console.log(isSupported ? "Sixels are supported!" : "Sixels aren't supported!");
+})();
 ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string
+declare function supportsSixel(): Promise<boolean>
 
-export = theModule
+export = supportsSixel

@@ -1,9 +1,14 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") {
-		throw new TypeError(`Expected a string, got ${typeof input}`)
-	}
+const replied = require("replied")
 
-	return `${input} & ${postfix}`
+const ESC = "\u001B["
+
+module.exports = async () => {
+	try {
+		const attributes = await replied(ESC + "0c")
+		return attributes.includes(";4")
+	} catch (_) {
+		return false
+	}
 }

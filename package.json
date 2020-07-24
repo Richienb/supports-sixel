@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "supports-sixel",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Detect whether a terminal can display sixels.",
+	"repository": "https://github.com/Richienb/supports-sixel.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,8 +17,15 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"terminal",
+		"sixel",
+		"ansi",
+		"code"
+	],
+	"dependencies": {
+		"replied": "^1.0.1"
+	},
 	"devDependencies": {
 		"ava": "^3.10.1",
 		"eslint-config-richienb": "^0.4.2",

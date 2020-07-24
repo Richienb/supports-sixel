@@ -1,41 +1,33 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# supports-sixel [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/supports-sixel/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/supports-sixel)
 
-My awesome module.
+Detect whether a terminal can display [sixels](https://en.wikipedia.org/wiki/Sixel).
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/supports-sixel.png)](https://npmjs.com/package/supports-sixel)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install supports-sixel
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const supportsSixel = require("supports-sixel");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	const isSupported = await supportsSixel();
+
+	console.log(isSupported ? "Sixels are supported!" : "Sixels aren't supported!");
+})();
 ```
 
 ## API
 
-### theModule(input, options?)
+### supportsSixel()
 
-#### input
+Returns a promise that resolves with a boolean.
 
-Type: `string`
+## Related
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+- [replied](https://github.com/Richienb/replied) - Log ansi codes and get the stdin response.
